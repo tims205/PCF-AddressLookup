@@ -17,6 +17,10 @@
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="API_KEY" display-name-key="OS API Key" description-key="API Key used for the Ordnance Survey API" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="AddressLine1" display-name-key="Line 1" description-key="Line 1" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="AddressLine2" display-name-key="Line 2" description-key="Line 2" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="AddressLine3" display-name-key="Line 3" description-key="Line 3" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="AddressCity" display-name-key="City" description-key="City" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="PostalCode" display-name-key="Post Code" description-key="Post Code" of-type="SingleLine.Text" usage="bound" required="true" />
     
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 

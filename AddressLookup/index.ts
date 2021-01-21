@@ -11,6 +11,10 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 	private notifyOutputChanged: () => void;
 
 	private _addressLine1: string = "";
+	private _addressLine2: string = "";
+	private _addressLine3: string = "";
+	private _addressCity: string = "";
+	private _addressPostcode: string = "";
 
 	/**
 	 * Empty constructor.
@@ -43,6 +47,9 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 				console.log("logging here: " + item);
 
 				this._addressLine1 = item.DPA.BUILDING_NUMBER + " " + item.DPA.THOROUGHFARE_NAME
+				this._addressLine2 = item.DPA.DEPENDENT_LOCALITY
+				this._addressCity = item.DPA.POST_TOWN
+				this._addressPostcode = item.DPA.POSTCODE
 
 				this.notifyOutputChanged();
 			}
@@ -75,7 +82,11 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 	public getOutputs(): IOutputs
 	{
 		return {
-			AddressLine1: this._addressLine1
+			AddressLine1: this._addressLine1,
+			AddressLine2: this._addressLine2,
+			AddressLine3: this._addressLine3,
+			AddressCity: this._addressCity,
+			PostalCode: this._addressPostcode
 		};
 	}
 
