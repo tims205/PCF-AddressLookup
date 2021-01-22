@@ -13,6 +13,7 @@ import {
 export interface IAddressLookupProps {
     apiKey: string | null,
     onChange: (value?: any) => void
+    onCleared: () => void;
 }
 
 const pickerProps: IInputProps = {
@@ -59,6 +60,9 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
             myProps.onChange(loadedAddresses.filter(
                 a => a["DPA"]["UPRN"] === items[0].key
             )[0]);
+        } else {
+            // Clear all values
+            myProps.onCleared();
         }
     }    
 
