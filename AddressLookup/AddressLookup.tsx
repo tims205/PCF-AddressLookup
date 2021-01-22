@@ -62,6 +62,7 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
             )[0]);
         } else {
             // Clear all values
+            setLoadedAddresses([]);
             myProps.onCleared();
         }
     }    

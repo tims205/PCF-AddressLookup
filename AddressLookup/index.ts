@@ -44,7 +44,7 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 		let props:IAddressLookupProps = {
 			apiKey: context.parameters.API_KEY.raw,
 			onChange: (item?: any) => {
-				this._addressLine1 = (item.DPA.BUILDING_NUMBER == null ? "" : item.DPA.BUILDING_NUMBER) + " " + (item.DPA.THOROUGHFARE_NAME == null ? "" : item.DPA.THOROUGHFARE_NAME)
+				this._addressLine1 = (item.DPA.BUILDING_NAME == null ? "" : item.DPA.BUILDING_NAME + " ") + (item.DPA.BUILDING_NUMBER == null ? "" : item.DPA.BUILDING_NUMBER + " ") + (item.DPA.THOROUGHFARE_NAME == null ? "" : item.DPA.THOROUGHFARE_NAME)
 				this._addressLine2 = item.DPA.DEPENDENT_LOCALITY == null ? "" : item.DPA.DEPENDENT_LOCALITY
 				this._addressCity = item.DPA.POST_TOWN == null ? "" : item.DPA.POST_TOWN
 				this._addressPostcode = item.DPA.POSTCODE == null ? "" : item.DPA.POSTCODE
