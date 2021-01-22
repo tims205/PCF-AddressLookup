@@ -1,0 +1,89 @@
+2021-01-22 09:21:39.283 - Info	
+Packing C:\Users\TSturgeon\Desktop\TimAddressLookup2\Solutions\obj\Debug\Metadata to bin\Debug\Solutions.zip
+
+2021-01-22 09:21:39.301 - Info	Processing Component: Entities
+2021-01-22 09:21:39.303 - Info	Processing Component: Roles
+2021-01-22 09:21:39.306 - Info	Processing Component: Workflows
+2021-01-22 09:21:39.306 - Info	Processing Component: FieldSecurityProfiles
+2021-01-22 09:21:39.306 - Info	Processing Component: Templates
+2021-01-22 09:21:39.306 - Info	Processing Component: EntityMaps
+2021-01-22 09:21:39.306 - Info	Processing Component: EntityRelationships
+2021-01-22 09:21:39.311 - Info	Processing Component: OrganizationSettings
+2021-01-22 09:21:39.311 - Info	Processing Component: optionsets
+2021-01-22 09:21:39.311 - Info	Processing Component: CustomControls
+2021-01-22 09:21:39.343 - Info	 - HSL.AddressLookup
+2021-01-22 09:21:39.521 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-22 09:21:39.522 - Info	Processing Component: EntityDataProviders
+2021-01-22 09:21:39.621 - Info	
+Unmanaged Pack complete.
+
+2021-01-22 11:36:44.572 - Info	
+Packing C:\Users\TSturgeon\Desktop\TimAddressLookup2\solutions\obj\Debug\Metadata to bin\Debug\Solutions.zip and bin\Debug\Solutions_managed.zip
+
+2021-01-22 11:36:44.597 - Info	Processing Component: Entities
+2021-01-22 11:36:44.599 - Info	Processing Component: Roles
+2021-01-22 11:36:44.601 - Info	Processing Component: Workflows
+2021-01-22 11:36:44.602 - Info	Processing Component: FieldSecurityProfiles
+2021-01-22 11:36:44.602 - Info	Processing Component: Templates
+2021-01-22 11:36:44.603 - Info	Processing Component: EntityMaps
+2021-01-22 11:36:44.603 - Info	Processing Component: EntityRelationships
+2021-01-22 11:36:44.613 - Info	Processing Component: OrganizationSettings
+2021-01-22 11:36:44.613 - Info	Processing Component: optionsets
+2021-01-22 11:36:44.613 - Info	Processing Component: CustomControls
+2021-01-22 11:36:44.631 - Info	 - HSL.AddressLookup
+2021-01-22 11:36:44.754 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-22 11:36:44.756 - Info	Processing Component: EntityDataProviders
+2021-01-22 11:36:44.854 - Info	
+Unmanaged Pack complete.
+
+2021-01-22 11:36:44.855 - Info	Processing Component: Entities
+2021-01-22 11:36:44.855 - Info	Processing Component: Roles
+2021-01-22 11:36:44.855 - Info	Processing Component: Workflows
+2021-01-22 11:36:44.855 - Info	Processing Component: FieldSecurityProfiles
+2021-01-22 11:36:44.855 - Info	Processing Component: Templates
+2021-01-22 11:36:44.856 - Info	Processing Component: EntityMaps
+2021-01-22 11:36:44.856 - Info	Processing Component: EntityRelationships
+2021-01-22 11:36:44.856 - Info	Processing Component: OrganizationSettings
+2021-01-22 11:36:44.856 - Info	Processing Component: optionsets
+2021-01-22 11:36:44.856 - Info	Processing Component: CustomControls
+2021-01-22 11:36:44.857 - Info	 - HSL.AddressLookup
+2021-01-22 11:36:44.859 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-22 11:36:44.859 - Info	Processing Component: EntityDataProviders
+2021-01-22 11:36:44.945 - Info	
+Managed Pack complete.
+
+2021-01-22 14:39:57.802 - Info	
+Packing C:\Users\TSturgeon\Desktop\TimAddressLookup2\solutions\obj\Debug\Metadata to bin\Debug\Solutions.zip and bin\Debug\Solutions_managed.zip
+
+2021-01-22 14:39:57.830 - Info	Processing Component: Entities
+2021-01-22 14:39:57.834 - Info	Processing Component: Roles
+2021-01-22 14:39:57.838 - Info	Processing Component: Workflows
+2021-01-22 14:39:57.838 - Info	Processing Component: FieldSecurityProfiles
+2021-01-22 14:39:57.838 - Info	Processing Component: Templates
+2021-01-22 14:39:57.839 - Info	Processing Component: EntityMaps
+2021-01-22 14:39:57.839 - Info	Processing Component: EntityRelationships
+2021-01-22 14:39:57.854 - Info	Processing Component: OrganizationSettings
+2021-01-22 14:39:57.855 - Info	Processing Component: optionsets
+2021-01-22 14:39:57.855 - Info	Processing Component: CustomControls
+2021-01-22 14:39:57.877 - Info	 - HSL.AddressLookup
+2021-01-22 14:39:58.057 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-22 14:39:58.058 - Info	Processing Component: EntityDataProviders
+2021-01-22 14:39:58.246 - Info	
+Unmanaged Pack complete.
+
+2021-01-22 14:39:58.247 - Info	Processing Component: Entities
+2021-01-22 14:39:58.247 - Info	Processing Component: Roles
+2021-01-22 14:39:58.248 - Info	Processing Component: Workflows
+2021-01-22 14:39:58.248 - Info	Processing Component: FieldSecurityProfiles
+2021-01-22 14:39:58.248 - Info	Processing Component: Templates
+2021-01-22 14:39:58.248 - Info	Processing Component: EntityMaps
+2021-01-22 14:39:58.249 - Info	Processing Component: EntityRelationships
+2021-01-22 14:39:58.249 - Info	Processing Component: OrganizationSettings
+2021-01-22 14:39:58.249 - Info	Processing Component: optionsets
+2021-01-22 14:39:58.249 - Info	Processing Component: CustomControls
+2021-01-22 14:39:58.250 - Info	 - HSL.AddressLookup
+2021-01-22 14:39:58.253 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-22 14:39:58.253 - Info	Processing Component: EntityDataProviders
+2021-01-22 14:39:58.359 - Info	
+Managed Pack complete.
+
