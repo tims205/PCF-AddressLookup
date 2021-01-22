@@ -1,6 +1,4 @@
-//#import * as React from 'react';
 import * as React from 'react'
-import {useState, useEffect} from 'react'
 
 const axios = require('axios').default;
 
@@ -49,11 +47,13 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
                 ));
             })
             .catch(function (error) {
+                //TODO
 
             })
         });
     }
     
+    // Find the address that was stored in loadedAddresses and pass it back to the PCF
     const onChange = (items?: ITag[]) => {
         if (items?.length === 1) {
             myProps.onChange(loadedAddresses.filter(
