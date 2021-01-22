@@ -6,7 +6,7 @@ A Power Apps Component Framework (PCF) control that uses the [Ordnance Survey Pl
 
 ## Installation
 
-1. Import either the managed or unmanaged solution (found in `/|Solutions/bin/debug`)
+1. Import either the managed or unmanaged solution (found in `/Solutions/bin/debug`)
 2. Add a column to the form that will be used to display the PCF. In the below example a column has been created called 'Address Search' 
 3. Add the 'Address Lookup' PCF control to the column
 
