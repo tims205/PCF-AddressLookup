@@ -34,12 +34,17 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
    
      function callApi(filterText?: string, tagList?: ITag[]): Promise<ITag[]> {
 
-        // TEMPORARY API KEY: Ak0r9y6uOdbIgSKgphQ7E6ynWYmZHfEN
-
+        // If no filterText supplied then return
+        if (!filterText || filterText === "") {
+            return new Promise<ITag[]>(function (resolve,reject) {
+                resolve(tagList == null ? [] : tagList);
+            });
+        }
+        
         setLoadedAddresses([]);
 
         return new Promise<ITag[]>(function (resolve,reject) {
-            axios.get(`https://api.ordnancesurvey.co.uk/places/v1/addresses/find?query=${filterText}&maxresults=20&key=${myProps.apiKey}`)
+            axios.get(`https://api.ordnancesurvey.co.uk/places/v1/addresses/find?query=${filterText}&maxresults=50&key=${myProps.apiKey}`)
             .then(function (response) {
                 // Save the loaded addresses so we don't have to query for the details again once a user selects one
                 setLoadedAddresses(response.data.results);
@@ -49,7 +54,6 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
             })
             .catch(function (error) {
                 //TODO
-
             })
         });
     }
