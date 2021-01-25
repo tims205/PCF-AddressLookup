@@ -23,7 +23,7 @@ const pickerProps: IInputProps = {
   };
 
 const pickerSuggestionsProps: IBasePickerSuggestionsProps = {
-    suggestionsHeaderText: 'Suggested addresses',
+    //suggestionsHeaderText: 'Suggested addresses',
     noResultsFoundText: 'No addresses found',
   };
 
@@ -47,13 +47,22 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
             axios.get(`https://api.ordnancesurvey.co.uk/places/v1/addresses/find?query=${filterText}&maxresults=50&key=${myProps.apiKey}`)
             .then(function (response) {
                 // Save the loaded addresses so we don't have to query for the details again once a user selects one
-                setLoadedAddresses(response.data.results);
-                resolve(response.data.results.map(
-                    item => ({key:item.DPA.UPRN, name: item.DPA.ADDRESS})
-                ));
+                if (response.data.header.totalresults > 0) {
+                    setLoadedAddresses(response.data.results);
+                    resolve(
+                            response.data.results.map(
+                            item => ({key:item.DPA.UPRN, name: item.DPA.ADDRESS})
+                        )
+                    );
+                } else {
+                    // Return an empty array so that the picker shows the pickerSuggestionsProps.noResultsFoundText message
+                    resolve([])
+                }
             })
             .catch(function (error) {
-                //TODO
+                console.log(error);
+                pickerSuggestionsProps.noResultsFoundText = `Error retrieving addresses: ${error.message}`
+                resolve([])
             })
         });
     }
@@ -77,6 +86,7 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
                 onResolveSuggestions={callApi}
                 pickerCalloutProps={pickerSuggestionsProps}
                 itemLimit={1}
+                pickerSuggestionsProps={pickerSuggestionsProps}
                 onChange={onChange}
                 inputProps={pickerProps}
                 resolveDelay={250}

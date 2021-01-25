@@ -87,3 +87,38 @@ Unmanaged Pack complete.
 2021-01-22 14:39:58.359 - Info	
 Managed Pack complete.
 
+2021-01-25 16:43:32.705 - Info	
+Packing C:\Users\TSturgeon\source\repos\PCFComponents\TimAddressLookup2\solutions\obj\Debug\Metadata to bin\Debug\Solutions.zip and bin\Debug\Solutions_managed.zip
+
+2021-01-25 16:43:32.739 - Info	Processing Component: Entities
+2021-01-25 16:43:32.741 - Info	Processing Component: Roles
+2021-01-25 16:43:32.743 - Info	Processing Component: Workflows
+2021-01-25 16:43:32.743 - Info	Processing Component: FieldSecurityProfiles
+2021-01-25 16:43:32.743 - Info	Processing Component: Templates
+2021-01-25 16:43:32.744 - Info	Processing Component: EntityMaps
+2021-01-25 16:43:32.744 - Info	Processing Component: EntityRelationships
+2021-01-25 16:43:32.759 - Info	Processing Component: OrganizationSettings
+2021-01-25 16:43:32.760 - Info	Processing Component: optionsets
+2021-01-25 16:43:32.760 - Info	Processing Component: CustomControls
+2021-01-25 16:43:32.784 - Info	 - HSL.AddressLookup
+2021-01-25 16:43:32.920 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-25 16:43:32.921 - Info	Processing Component: EntityDataProviders
+2021-01-25 16:43:33.030 - Info	
+Unmanaged Pack complete.
+
+2021-01-25 16:43:33.031 - Info	Processing Component: Entities
+2021-01-25 16:43:33.031 - Info	Processing Component: Roles
+2021-01-25 16:43:33.031 - Info	Processing Component: Workflows
+2021-01-25 16:43:33.031 - Info	Processing Component: FieldSecurityProfiles
+2021-01-25 16:43:33.032 - Info	Processing Component: Templates
+2021-01-25 16:43:33.032 - Info	Processing Component: EntityMaps
+2021-01-25 16:43:33.032 - Info	Processing Component: EntityRelationships
+2021-01-25 16:43:33.033 - Info	Processing Component: OrganizationSettings
+2021-01-25 16:43:33.033 - Info	Processing Component: optionsets
+2021-01-25 16:43:33.033 - Info	Processing Component: CustomControls
+2021-01-25 16:43:33.033 - Info	 - HSL.AddressLookup
+2021-01-25 16:43:33.035 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-25 16:43:33.036 - Info	Processing Component: EntityDataProviders
+2021-01-25 16:43:33.130 - Info	
+Managed Pack complete.
+
