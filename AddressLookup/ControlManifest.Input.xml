@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="HSL" constructor="AddressLookup" version="0.0.6" display-name-key="Address Lookup" description-key="Uses the Ordnance Survey Places API to find and return an address." control-type="standard">
+  <control namespace="HSL" constructor="AddressLookup" version="0.0.9" display-name-key="Address Lookup" description-key="Uses the Ordnance Survey Places API to find and return an address." control-type="standard">
     <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
     If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be true by default.
     -->
@@ -10,12 +10,12 @@
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="API_KEY" display-name-key="OS API Key" description-key="API Key used for the Ordnance Survey API" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="ADDRESS_SEARCH" display-name-key="Address search" description-key="The field used to display the PCF component" of-type="SingleLine.Text" usage="bound" required="true" />
-    <property name="AddressName" display-name-key="Address Name" description-key="Address Name" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="AddressLine1" display-name-key="Line 1" description-key="Address line 1 field mapping" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="AddressLine2" display-name-key="Line 2" description-key="Address line 2 field mapping" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="AddressLine3" display-name-key="Line 3" description-key="Line 3" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="AddressCity" display-name-key="City" description-key="City" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="PostalCode" display-name-key="Post Code" description-key="Post Code" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="County" display-name-key="County" description-key="County" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="StateOrProvince" display-name-key="State or Province" description-key="State or Province" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="POBox" display-name-key="Post Office Box Number" description-key="Post Office Box Number" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="UPRN" display-name-key="UPRN" description-key="UPRN" of-type="SingleLine.Text" usage="bound" required="false" />

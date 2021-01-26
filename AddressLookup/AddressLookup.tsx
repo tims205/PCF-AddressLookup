@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+
 const axios = require('axios').default;
 
 import {
@@ -9,6 +10,9 @@ import {
     IInputProps,
     IBasePickerSuggestionsProps
 } from "office-ui-fabric-react/lib/Pickers"
+
+import { initializeIcons } from '@fluentui/react';
+initializeIcons();
 
 export interface IAddressLookupProps {
     apiKey: string | null,
@@ -24,7 +28,7 @@ const pickerProps: IInputProps = {
 
 const pickerSuggestionsProps: IBasePickerSuggestionsProps = {
     //suggestionsHeaderText: 'Suggested addresses',
-    noResultsFoundText: 'No addresses found',
+    noResultsFoundText: 'No addresses found'
   };
 
 
@@ -33,6 +37,9 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
     const [loadedAddresses, setLoadedAddresses] = React.useState([]);
    
      function callApi(filterText?: string, tagList?: ITag[]): Promise<ITag[]> {
+
+        tagList = [];
+        
 
         // If no filterText supplied then return
         if (!filterText || filterText === "") {
@@ -47,11 +54,14 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
             axios.get(`https://api.ordnancesurvey.co.uk/places/v1/addresses/find?query=${filterText}&maxresults=50&key=${myProps.apiKey}`)
             .then(function (response) {
                 // Save the loaded addresses so we don't have to query for the details again once a user selects one
-                if (response.data.header.totalresults > 0) {
+                if (response.data.header.totalresults > 0 && response.data.results) {
                     setLoadedAddresses(response.data.results);
                     resolve(
                             response.data.results.map(
-                            item => ({key:item.DPA.UPRN, name: item.DPA.ADDRESS})
+                            (item,index) => ({
+                                key: index,
+                                name: item.DPA.ADDRESS 
+                            })   
                         )
                     );
                 } else {
@@ -66,13 +76,11 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
             })
         });
     }
-    
+
     // Find the address that was stored in loadedAddresses and pass it back to the PCF
     const onChange = (items?: ITag[]) => {
         if (items?.length === 1) {
-            myProps.onChange(loadedAddresses.filter(
-                a => a["DPA"]["UPRN"] === items[0].key
-            )[0]);
+            myProps.onChange(loadedAddresses[items[0].key]);
         } else {
             // Clear all values
             setLoadedAddresses([]);
