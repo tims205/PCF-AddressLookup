@@ -15,7 +15,7 @@
     <property name="AddressLine3" display-name-key="Line 3" description-key="Line 3" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="AddressCity" display-name-key="City" description-key="City" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="PostalCode" display-name-key="Post Code" description-key="Post Code" of-type="SingleLine.Text" usage="bound" required="false" />
-    <property name="County" display-name-key="County" description-key="County" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="County" display-name-key="County" description-key="County - Modify FormXML to map https://blog.magnetismsolutions.com/blog/jaredjohnson/2019/07/04/binding-to-address-fields-in-a-pcf-control" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="StateOrProvince" display-name-key="State or Province" description-key="State or Province" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="POBox" display-name-key="Post Office Box Number" description-key="Post Office Box Number" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="UPRN" display-name-key="UPRN" description-key="UPRN" of-type="SingleLine.Text" usage="bound" required="false" />
