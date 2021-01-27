@@ -44,7 +44,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\TimAddressLookup2.pcfproj" />
+    <ProjectReference Include="..\AddressLookupFluentUI.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

@@ -52,7 +52,7 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 				if (item.DPA) {
 
 					// Attempt to format the address....
-					if (item.DPA.ORGANISATION_NAME || item.DPA.DEPARTMENT_NAME)	{
+					if ((item.DPA.ORGANISATION_NAME) || (item.DPA.DEPARTMENT_NAME))	{
 
 						// If organisation name exists then format like a company address
 						this._addressLine1 = (item.DPA.ORGANISATION_NAME == null ? "" : item.DPA.ORGANISATION_NAME + " ")
@@ -82,7 +82,7 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 						}
 					} else {
 						// no organisation or department name - assume this is a private address e.g. flat or house
-						if (item.DPA.SUB_BUILDING_NAME || item.DPA.BUILDING_NAME) {
+						if ((item.DPA.SUB_BUILDING_NAME) || (item.DPA.BUILDING_NAME)) {
 							this._addressLine1 = (item.DPA.SUB_BUILDING_NAME == null ? "" : item.DPA.SUB_BUILDING_NAME + " ")
 							+ (item.DPA.BUILDING_NAME == null ? "" : item.DPA.BUILDING_NAME + " ")
 
@@ -114,7 +114,7 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 					this._addressCounty = (item.DPA.DOUBLE_DEPENDENT_LOCALITY == null ? "" : item.DPA.DOUBLE_DEPENDENT_LOCALITY + " ,") 
 										+ (item.DPA.DEPENDENT_LOCALITY == null ? "" : item.DPA.DEPENDENT_LOCALITY)
 
-					this._addressStateOrProvince = item.DPA.LOCAL_CUSTODIAN_CODE_DESCRIPTION == null ? "" : item.DPA.LOCAL_CUSTODIAN_CODE_DESCRIPTION;
+					this._addressStateOrProvince = item.DPA.LOCAL_CUSTODIAN_CODE_DESCRIPTION == null ? "" : item.DPA.LOCAL_CUSTODIAN_CODE_DESCRIPTION === "ORDNANCE SURVEY" ? "" : item.DPA.LOCAL_CUSTODIAN_CODE_DESCRIPTION; // Some entries are returned with the value 'ORDNANCE SURVEY' here so remove it.
 					this._addressPostcode = item.DPA.POSTCODE == null ? "" : item.DPA.POSTCODE;
 					this._poBoxNumber = item.DPA.PO_BOX_NUMBER == null ? "" : "PO BOX " + item.DPA.PO_BOX_NUMBER;
 					this._addressUPRN = item.DPA.UPRN == null ? "" : item.DPA.UPRN;

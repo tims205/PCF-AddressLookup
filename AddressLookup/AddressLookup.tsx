@@ -24,13 +24,14 @@ const pickerProps: IInputProps = {
     onBlur: (ev: React.FocusEvent<HTMLInputElement>) => console.log('onBlur called'),
     onFocus: (ev: React.FocusEvent<HTMLInputElement>) => console.log('onFocus called'),
     'aria-label': 'Address picker',
+    placeholder: 'Start typing here to search for an address...'
   };
 
 const pickerSuggestionsProps: IBasePickerSuggestionsProps = {
     //suggestionsHeaderText: 'Suggested addresses',
-    noResultsFoundText: 'No addresses found'
+    noResultsFoundText: 'No addresses found',
+    searchForMoreText: ""
   };
-
 
 export function AddressLookupControl(myProps: IAddressLookupProps) {
     const picker = React.useRef<IBasePicker<ITag>>(null);
@@ -40,6 +41,7 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
 
         tagList = [];
         
+        pickerSuggestionsProps.searchForMoreText = "";
 
         // If no filterText supplied then return
         if (!filterText || filterText === "") {
@@ -56,6 +58,11 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
                 // Save the loaded addresses so we don't have to query for the details again once a user selects one
                 if (response.data.header.totalresults > 0 && response.data.results) {
                     setLoadedAddresses(response.data.results);
+
+                    if (response.data.header.totalresults > 50) {
+                        pickerSuggestionsProps.searchForMoreText = "There are more results available. Provide more information to refine the address search"
+                    }
+
                     resolve(
                             response.data.results.map(
                             (item,index) => ({
