@@ -542,3 +542,38 @@ Unmanaged Pack complete.
 2021-01-27 09:23:41.524 - Info	
 Managed Pack complete.
 
+2021-01-29 09:02:24.248 - Info	
+Packing C:\Users\TSturgeon\source\repos\PCFComponents\TimAddressLookup2\solutions\obj\Debug\Metadata to bin\Debug\Solutions.zip and bin\Debug\Solutions_managed.zip
+
+2021-01-29 09:02:24.278 - Info	Processing Component: Entities
+2021-01-29 09:02:24.280 - Info	Processing Component: Roles
+2021-01-29 09:02:24.283 - Info	Processing Component: Workflows
+2021-01-29 09:02:24.283 - Info	Processing Component: FieldSecurityProfiles
+2021-01-29 09:02:24.283 - Info	Processing Component: Templates
+2021-01-29 09:02:24.284 - Info	Processing Component: EntityMaps
+2021-01-29 09:02:24.284 - Info	Processing Component: EntityRelationships
+2021-01-29 09:02:24.297 - Info	Processing Component: OrganizationSettings
+2021-01-29 09:02:24.298 - Info	Processing Component: optionsets
+2021-01-29 09:02:24.298 - Info	Processing Component: CustomControls
+2021-01-29 09:02:24.324 - Info	 - Hsl.Pcf.AddressLookupFluentUI.AddressLookup
+2021-01-29 09:02:24.570 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-29 09:02:24.571 - Info	Processing Component: EntityDataProviders
+2021-01-29 09:02:24.650 - Info	
+Unmanaged Pack complete.
+
+2021-01-29 09:02:24.651 - Info	Processing Component: Entities
+2021-01-29 09:02:24.651 - Info	Processing Component: Roles
+2021-01-29 09:02:24.651 - Info	Processing Component: Workflows
+2021-01-29 09:02:24.652 - Info	Processing Component: FieldSecurityProfiles
+2021-01-29 09:02:24.652 - Info	Processing Component: Templates
+2021-01-29 09:02:24.652 - Info	Processing Component: EntityMaps
+2021-01-29 09:02:24.652 - Info	Processing Component: EntityRelationships
+2021-01-29 09:02:24.652 - Info	Processing Component: OrganizationSettings
+2021-01-29 09:02:24.652 - Info	Processing Component: optionsets
+2021-01-29 09:02:24.652 - Info	Processing Component: CustomControls
+2021-01-29 09:02:24.654 - Info	 - Hsl.Pcf.AddressLookupFluentUI.AddressLookup
+2021-01-29 09:02:24.655 - Info	Processing Component: SolutionPluginAssemblies
+2021-01-29 09:02:24.655 - Info	Processing Component: EntityDataProviders
+2021-01-29 09:02:24.748 - Info	
+Managed Pack complete.
+
