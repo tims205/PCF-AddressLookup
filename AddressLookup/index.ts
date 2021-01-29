@@ -19,6 +19,8 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 	private _addressStateOrProvince: string = "";
 	private _poBoxNumber: string = "";
 	private _addressUPRN: string = "";
+	private _addressLatitude?: number;
+	private _addressLongitude?: number;
 	
 
 	/**
@@ -48,6 +50,7 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 
 		let props:IAddressLookupProps = {
 			apiKey: context.parameters.API_KEY.raw,
+			baseUrl: context.parameters.BASE_URL.raw,
 			onChange: (item?: any) => {
 				if (item.DPA) {
 
@@ -118,7 +121,9 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 					this._addressPostcode = item.DPA.POSTCODE == null ? "" : item.DPA.POSTCODE;
 					this._poBoxNumber = item.DPA.PO_BOX_NUMBER == null ? "" : "PO BOX " + item.DPA.PO_BOX_NUMBER;
 					this._addressUPRN = item.DPA.UPRN == null ? "" : item.DPA.UPRN;
-					
+
+					this._addressLatitude = item.DPA.LAT == null ? undefined : item.DPA.LAT;
+					this._addressLongitude = item.DPA.LNG == null ? undefined : item.DPA.LNG;
 					
 					this.notifyOutputChanged();
 				}
@@ -133,6 +138,8 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 				this._addressStateOrProvince = ""
 				this._poBoxNumber = ""
 				this._addressUPRN = ""
+				this._addressLatitude = undefined;
+				this._addressLongitude = undefined;
 
 				this.notifyOutputChanged();
 			}
@@ -173,7 +180,10 @@ export class AddressLookup implements ComponentFramework.StandardControl<IInputs
 			County: this._addressCounty,
 			StateOrProvince: this._addressStateOrProvince,
 			POBox: this._poBoxNumber,
-			UPRN: this._addressUPRN
+			UPRN: this._addressUPRN,
+			Latitude: this._addressLatitude,
+			Longitude: this._addressLongitude
+			
 			
 		};
 	}

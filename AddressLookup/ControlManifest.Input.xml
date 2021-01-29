@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="Hsl.Pcf.AddressLookupFluentUI" constructor="AddressLookup" version="0.0.12" display-name-key="Hsl Address Lookup" description-key="Uses the Ordnance Survey Places API to find and return an address." control-type="standard">
+  <control namespace="Hsl.Pcf.AddressLookupFluentUI" constructor="AddressLookup" version="0.0.16" display-name-key="Hsl Address Lookup" description-key="Uses the Ordnance Survey Places API to find and return an address." control-type="standard">
     <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
     If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be true by default.
     -->
@@ -9,6 +9,7 @@
     </external-service-usage>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="API_KEY" display-name-key="OS API Key" description-key="API Key used for the Ordnance Survey API" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="BASE_URL" display-name-key="Base URL" description-key="The base URL to use. This will either be https://api.os.uk/search/places/v1/find or https://api.ordnancesurvey.co.uk/places/v1/addresses/find" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="ADDRESS_SEARCH" display-name-key="Address search" description-key="The field used to display the PCF component" of-type="SingleLine.Text" usage="bound" required="true" />
     <property name="AddressLine1" display-name-key="Line 1" description-key="Address line 1 field mapping" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="AddressLine2" display-name-key="Line 2" description-key="Address line 2 field mapping" of-type="SingleLine.Text" usage="bound" required="false" />
@@ -18,6 +19,8 @@
     <property name="County" display-name-key="County" description-key="County - Modify FormXML to map https://blog.magnetismsolutions.com/blog/jaredjohnson/2019/07/04/binding-to-address-fields-in-a-pcf-control" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="StateOrProvince" display-name-key="State or Province" description-key="State or Province" of-type="SingleLine.Text" usage="bound" required="false" />
     <property name="POBox" display-name-key="Post Office Box Number" description-key="Post Office Box Number" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="Latitude" display-name-key="Latitude" description-key="Latitude" of-type="FP" usage="bound" required="false" />
+    <property name="Longitude" display-name-key="Longitude" description-key="Longitude" of-type="FP" usage="bound" required="false" />
     <property name="UPRN" display-name-key="UPRN" description-key="UPRN" of-type="SingleLine.Text" usage="bound" required="false" />
     
     

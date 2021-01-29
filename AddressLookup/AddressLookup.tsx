@@ -16,6 +16,7 @@ initializeIcons();
 
 export interface IAddressLookupProps {
     apiKey: string | null,
+    baseUrl: string | null,
     onChange: (value?: any) => void
     onCleared: () => void;
 }
@@ -52,8 +53,8 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
         
         setLoadedAddresses([]);
 
-        return new Promise<ITag[]>(function (resolve,reject) {
-            axios.get(`https://api.ordnancesurvey.co.uk/places/v1/addresses/find?query=${filterText}&maxresults=50&key=${myProps.apiKey}`)
+         return new Promise<ITag[]>(function (resolve, reject) {
+             axios.get(`${myProps.baseUrl}?query=${filterText}&maxresults=50&output_srs=WGS84&key=${myProps.apiKey}`)
             .then(function (response) {
                 // Save the loaded addresses so we don't have to query for the details again once a user selects one
                 if (response.data.header.totalresults > 0 && response.data.results) {
