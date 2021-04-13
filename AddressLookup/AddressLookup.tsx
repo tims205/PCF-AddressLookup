@@ -66,8 +66,9 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
 
                     resolve(
                             response.data.results.map(
-                            (item,index) => ({
-                                key: index,
+                                (item, index) => ({
+                                // Use the DPA.ADDRESS property as a key because the UPRN and UDPRN aren't alway populated
+                                key: item.DPA.ADDRESS,
                                 name: item.DPA.ADDRESS 
                             })   
                         )
@@ -85,16 +86,26 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
         });
     }
 
-    // Find the address that was stored in loadedAddresses and pass it back to the PCF
+    // Used to clear the selected address and list of loaded addresses when the user clears a selected entry
     const onChange = (items?: ITag[]) => {
-        if (items?.length === 1) {
-            myProps.onChange(loadedAddresses[items[0].key]);
-        } else {
+        if (items?.length === 0) {
             // Clear all values
             setLoadedAddresses([]);
             myProps.onCleared();
-        }
+        } 
     }    
+
+    // Find the address that was stored in loadedAddresses and pass it back to the PCF
+    // UPRN and UPDRN are sometimes blank, so the concatenanted 'ADDRESS' value is used as a key
+    const onItemSelected = (item: ITag | undefined) => {
+        if (item != null) {
+            // @ts-ignore
+            myProps.onChange(loadedAddresses.filter(e => e.DPA.ADDRESS == item.key)[0]);
+            return item;
+        } else {
+            return null;
+        }
+    };
 
     return (
         <div>
@@ -104,6 +115,7 @@ export function AddressLookupControl(myProps: IAddressLookupProps) {
                 itemLimit={1}
                 pickerSuggestionsProps={pickerSuggestionsProps}
                 onChange={onChange}
+                onItemSelected={onItemSelected}
                 inputProps={pickerProps}
                 resolveDelay={250}
             />
